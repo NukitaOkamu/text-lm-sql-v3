@@ -3,7 +3,7 @@
 # the 'out' directory structure created by split_save_pkg.py, extracting schema, package, and 
 # procedure names from the folder hierarchy and .SQL files. It connects to an Oracle database 
 # using cx_Oracle and inserts each routine’s details, including its body, to centralize metadata 
-# for subsequent analysis in the text-to-SQL pipeline.
+# for subsequent analysis in the text-to-SQL pipeline. 
 import os
 import cx_Oracle
 from pathlib import Path
