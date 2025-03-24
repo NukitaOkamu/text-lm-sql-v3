@@ -1,0 +1,7 @@
+cx_Oracle
+openai 
+dotenv
+tiktoken
+numpy 
+scipy
+python-dotenv
