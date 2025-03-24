@@ -131,4 +131,4 @@ Learn more about the project’s design and implementation in [this blog post](h
 
 ## Contributing
 
-Contributions are welcome! Fork the repo, create a branch, and submit a pull request with your improvements.
+Contributions are welcome! Fork the repo, create a branch, and submit a pull request with your improvements. :()
