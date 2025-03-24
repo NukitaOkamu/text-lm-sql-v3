@@ -89,12 +89,12 @@ python gen_table_query_example.py
 python gen_table_embeddings.py
 
 # Convert text to SQL
-python sql_maker_flow_2.py
+python text_to_sql.py
 ```
 
-Example request in `sql_maker_flow_2.py`:
+Example request in `text_to_sql.py`:
 ```python
-request = "Ali je oseba Jože Mikič kaj dolžna? Poglej v pfr_postavka_fr_dokumenta. Breme >0, knjizni_saldo_vrstice > 0"
+request = "Ali je oseba Miha Novak kaj dolžna?"
 ```
 
 Output SQL is logged to `sql_logs/`.
@@ -109,7 +109,7 @@ Output SQL is logged to `sql_logs/`.
 - `gen_table_description.py`: Synthesizes general table descriptions.
 - `gen_table_query_example.py`: Creates general SQL query examples.
 - `gen_table_embeddings.py`: Generates table embeddings.
-- `sql_maker_flow_2.py`: Converts text to SQL with iterative refinement.
+- `text_to_sql.py`: Converts text to SQL with iterative refinement.
 - `azure_openai_client.py`: Manages Azure OpenAI API interactions.
 - `tables_ddl_2.sql`: Database schema setup.
 
