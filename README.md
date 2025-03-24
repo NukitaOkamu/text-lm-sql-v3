@@ -57,7 +57,7 @@ Designed for developers, it offers a framework adaptable to any Oracle database 
      ```
 
 5. **Database Setup**
-   - Run `tables_ddl_2.sql` to create required tables (`DB_ROUTINE_METADATA`, `DB_TABLE_METADATA`, `DB_ROUTINE_TABLE_USAGE`).
+   - Run `tables_ddl.sql` to create required tables (`DB_ROUTINE_METADATA`, `DB_TABLE_METADATA`, `DB_ROUTINE_TABLE_USAGE`).
 
 ## Usage
 
@@ -111,7 +111,7 @@ Output SQL is logged to `sql_logs/`.
 - `gen_table_embeddings.py`: Generates table embeddings.
 - `text_to_sql.py`: Converts text to SQL with iterative refinement.
 - `azure_openai_client.py`: Manages Azure OpenAI API interactions.
-- `tables_ddl_2.sql`: Database schema setup.
+- `tables_ddl.sql`: Database schema setup.
 
 ## Blog Post
 
