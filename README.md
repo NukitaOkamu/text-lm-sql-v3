@@ -23,7 +23,7 @@ Designed for developers, it offers a framework adaptable to any Oracle database 
 ## Prerequisites
 
 - Python 3.9
-- Oracle Database (tested with `RAZVOJDB`)
+- Oracle Database (tested with `DEVDB`)
 - Azure OpenAI API key and endpoint
 - Oracle Instant Client (e.g., `instantclient_23_7`)
 
