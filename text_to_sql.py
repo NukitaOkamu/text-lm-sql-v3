@@ -73,19 +73,19 @@ def refactor_user_input(raw_input):
     
     prompt = f"""You are an expert in natural language processing and database querying. Below is a user request in Slovenian:
 
-**Raw Input**: "{raw_input}"
+    **Raw Input**: "{raw_input}"
 
-Analyze the request and refactor it into a concise, clear statement optimized for generating an Oracle SQL query. Focus on:
-- Identifying key entities (e.g., names of people, objects).
-- Interpreting the intent (e.g., financial, informational).
-- Rephrasing it to align with database concepts (e.g., tables like 'persons', 'transactions').
-- Preserving any specific conditions or table names mentioned (e.g., 'pfr_postavka_fr_dokumenta', 'Breme > 0').
+    Analyze the request and refactor it into a concise, clear statement optimized for generating an Oracle SQL query. Focus on:
+    - Identifying key entities (e.g., names of people, objects).
+    - Interpreting the intent (e.g., financial, informational).
+    - Rephrasing it to align with database concepts (e.g., tables like 'persons', 'transactions').
+    - Preserving any specific conditions or table names mentioned.
 
-Return your response in the following format:
-```
-Refined Input: <your refactored statement>
-Explanation: <brief reasoning>
-```"""
+    Return your response in the following format:
+    ```
+    Refined Input: <your refactored statement>
+    Explanation: <brief reasoning>
+    ```"""
 
     response = completion_azure_client.chat.completions.create(
         model=completion_model,
@@ -465,10 +465,9 @@ Based on this expanded metadata, refine the Oracle SQL query to better answer th
 - Use implicit SQL syntax (e.g., list tables with commas in the FROM clause and specify join conditions in the WHERE clause) instead of explicit JOINs.
 - For date types use only <, >, =, >=, <=, != and =
 - Date format always 'dd.mm.yyyy' and for time 'dd.mm.yyyy hh24:mi:ss'
-- Do not include schema names (e.g., "INSURANCE2.") before table names.
+- Do not include schema names () before table names.
 - Include appropriate JOINs through WHERE clauses based on the foreign key relationships.
 - Do not hallucinate non-existing columns; use only columns available in the DDL.
-- Audit columns: UPOVNO is user insert, UPOSPR is user last update, DATVNO is date insert, DATSPR is date last update.
 
 Additionally, analyze if we need to expand further to include more FK tables:
 
